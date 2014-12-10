@@ -6,11 +6,33 @@ module.exports = function(grunt) {
   // Load all grunt tasks
   require('load-grunt-tasks')(grunt);
 
+  grunt.loadNpmTasks('grunt-contrib-coffeeify');
+
   // Project configuration.
   grunt.initConfig({
     nodeunit: {
       files: ['test/**/*_test.js']
     },
+
+    coffeeify: {
+      build: {
+        cwd:  'lib',
+        src:  ['**/*.coffee'],
+        dest: 'lib'
+      }
+    },
+
+    browserify: {
+      dist: {
+        files: {
+          'dist/hybrid-auth.js': ['lib/**/*.js']
+        }
+        //options: {
+        //  transform: ['coffeeify']
+        //}
+      }
+    },
+
     jshint: {
       options: {
         jshintrc: '.jshintrc',

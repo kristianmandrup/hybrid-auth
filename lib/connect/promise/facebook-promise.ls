@@ -16,7 +16,7 @@ resolvePromise = (promise, ...) ->
 
 module.exports =
   signIn: (permissions, promise) ->
-    deferred = promise.defer()
+    deferred = promise.defer!
     if plugins.facebook
       plugins.facebook.login permissions, loginResolver(deferred)
       deferred.promise

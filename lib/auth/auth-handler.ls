@@ -1,5 +1,5 @@
 class AuthHandler
-  constructor: ->
+  ->
 
   # default authhandler
   authHandler: (authObj) ->

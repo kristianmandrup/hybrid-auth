@@ -11,13 +11,12 @@ tokenHandler = (handler, provider) ->
   new Handler provider
 
 authHandler = (handler, ...args) ->
-  Handler = api.auth.Handler.lookup(handler)
-  new Handler args
+  Handler = api.auth.Handler.lookup handler
+  new Handler ...args
 
 connector = (provider, ...args) ->
   Connector = api.connect.Connector.lookup(provider)
-  new Connector args
-
+  new Connector ...args
 
 module.exports =
   api:          api

@@ -1,10 +1,11 @@
 extend = (obj, mixin) ->
-  obj[name] = method for name, method of mixin
+  for name, method of mixin
+    obj[name] = method
   obj
 
 include = (klass, mixin) ->
   extend klass.prototype, mixin
 
-module.exports
+module.exports =
   extend: extend
   include: include

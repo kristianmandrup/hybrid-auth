@@ -2,7 +2,7 @@ TokenHandler = require 'token-handler'
 
 class FirebaseTokenHandler extends TokenHandler
   oAuthMethod: ->
-    if @native then 'authWithOAuthToken' else 'authWithOAuthPopup'
+    if @isNative then 'authWithOAuthToken' else 'authWithOAuthPopup'
 
   authMethod: ->
     @firebaseRef[@oAuthMethod()]

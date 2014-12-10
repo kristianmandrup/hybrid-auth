@@ -1,5 +1,5 @@
 class TokenHandler
-  constructor: (@authProviderName, @native = false) ->
+  (@authProviderName, @isNative = false) ->
 
     # default authhandler
   authHandler: (authObj) ->

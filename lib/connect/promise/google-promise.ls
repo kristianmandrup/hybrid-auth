@@ -7,7 +7,7 @@ loginResolver = (deferred) ->
 
 module.exports =
   signIn: (settings, promise) ->
-    deferred = promise.defer()
+    deferred = promise.defer!
 
     if typeof plugins is undefined
       msg = 'Plugins are only available on the simulator or on a real device.';

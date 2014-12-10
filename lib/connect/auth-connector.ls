@@ -1,6 +1,6 @@
 class AuthConnector
   constructor: (@connector, @tokenHandler, @options = {}) ->
-    @tokenHandler.native = true
+    @tokenHandler.isNative = true
     # validate?
     @permissions = @options.permissions if @options.permissions
 
@@ -14,5 +14,4 @@ class AuthConnector
 util = require '../util'
 util.xtender.extend AuthConnector, util.Registry
 
-module.exports =
-  AuthConnector: AuthConnector
+module.exports = AuthConnector

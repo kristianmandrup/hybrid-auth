@@ -4,21 +4,7 @@
 
 ## Getting Started
 
-Install the module with: `npm install hybrid-auth`
-
-Install with cli command
-
-```sh
-$ npm install -g hybrid-auth
-$ hybrid-auth --help
-$ hybrid-auth --version
-```
-
-
-```sh
-# creates a browser.js
-$ grunt browserify
-```
+Install the module with `npm install hybrid-auth --save`
 
 ## Status
 
@@ -89,6 +75,11 @@ Awesome!!!
 In lieu of a formal style guide, take care to maintain the existing coding style.
 Add unit tests for any new or changed functionality.
 Lint and test your code using [Grunt](http://gruntjs.com).
+
+```sh
+# creates dist/hybrid-auth.js
+$ grunt browserify
+```
 
 ## License
 
