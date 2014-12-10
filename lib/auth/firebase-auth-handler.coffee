@@ -1,6 +1,5 @@
 AuthHandler = require './auth-handler'
 
-
 class FirebaseAuthHandler extends AuthHandler
   constructor: (ref, authHandler) ->
     @setFirebaseRef(ref)
