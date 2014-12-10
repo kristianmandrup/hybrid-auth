@@ -66,6 +66,15 @@ We are also experimenting with Promise based strategies in `lib/connect/promise`
 
 _More example will follow shortly..._
 
+### Alternatives
+
+Some other ways...
+
+- [ng-cordova-oauth](https://github.com/nraboy/ng-cordova-oauth) for use in any Angular project
+- [hybrid ionic app](https://github.com/malikov/Authenticate.me-client-cordova-ionic)
+
+Awesome!!!
+
 ### Links
 
 - [Facebook login permissions](https://developers.facebook.com/docs/facebook-login/permissions/v2.2)

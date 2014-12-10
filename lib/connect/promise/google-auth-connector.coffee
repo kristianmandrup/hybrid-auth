@@ -1,6 +1,6 @@
 module.expots =
   signIn: (settings, Promise) ->
-    if typeof plugins is undefined)
+    if typeof plugins is undefined
       msg = 'Plugins are only available on the simulator or on a real device.';
       return Promise.reject(msg);
 
