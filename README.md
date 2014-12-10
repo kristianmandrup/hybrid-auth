@@ -60,13 +60,16 @@ app.auth.authHandler  = new FirebaseAuthHandler('my-firebase', function (authObj
 });
 ```
 
-As soon as we get this infrastructure working we can improve the public API to make it easier to use.
+As soon as we get this infrastructure is working we can improve the public API to make it a little easier to use ;)
+
+We are also experimenting with Promise based strategies in `lib/connect/promise`
 
 _More example will follow shortly..._
 
 ### Links
 
 - [Facebook login permissions](https://developers.facebook.com/docs/facebook-login/permissions/v2.2)
+- [Promise inspiration](https://github.com/poetic/ember-cli-cordova-auth/blob/master/app)
 
 ## Contributing
 

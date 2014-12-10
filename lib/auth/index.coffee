@@ -1,3 +1,3 @@
 module.exports =
-  Handler:         require 'auth-handler'
-  FirebaseHandler: require 'firebase-auth-handler'
+  Handler:         require './auth-handler'
+  FirebaseHandler: require './firebase-auth-handler'

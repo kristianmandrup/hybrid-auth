@@ -1,3 +1,3 @@
 module.exports =
-  Handler:         require 'token-handler'
-  FirebaseHandler: require 'firebase-token-handler'
+  Handler:         require './token-handler'
+  FirebaseHandler: require './firebase-token-handler'

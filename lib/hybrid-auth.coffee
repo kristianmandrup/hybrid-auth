@@ -2,6 +2,7 @@
 
 module.exports =
   auth:       require './auth'
-  connect:    require './connector'
+  connect:    require './connect'
   token:      require './token'
+  util:       require './util'
 
