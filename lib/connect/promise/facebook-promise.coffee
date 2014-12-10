@@ -4,17 +4,21 @@ if plugins is undefined
 unless facebookConnectPlugin is undefined
   plugins.facebook = facebookConnectPlugin
 
-loginResolver = (resolve, reject) ->
+loginResolver = (deferred) ->
   (res) ->
     if res.authResponse.accessToken
-      resolve res
+      deferred.resolve res
     else
-      reject 'Error authenticating with Facebook. Please sign up or in with an email and password.'
+      deferred.reject 'Error authenticating with Facebook. Please sign up or in with an email and password.'
+
+resolvePromise = (promise, ...) ->
+  if typeof promise is 'function' then new promise(arguments) else promise(arguments)
 
 module.exports =
-  signIn: (permissions, Promise) ->
-    if typeof facebookConnectPlugin is 'undefined'
-      new Promise(resolve, reject) ->
-        plugins.facebook.login permissions, loginResolver, reject
+  signIn: (permissions, promise) ->
+    deferred = promise.defer()
+    if plugins.facebook
+      plugins.facebook.login permissions, loginResolver(deferred)
+      deferred.promise
     else
-      Promise.reject('Facebook login only available in app')
+      deferred.reject 'Facebook login only available in app'
