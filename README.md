@@ -1,5 +1,7 @@
 #  [![Build Status](https://secure.travis-ci.org/kristianmandrup/hybrid-auth.png?branch=master)](http://travis-ci.org/kristianmandrup/hybrid-auth)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristianmandrup/hybrid-auth.svg)](https://greenkeeper.io/)
+
 > Hybrid Auth
 
 ## Getting Started
